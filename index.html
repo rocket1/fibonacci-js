@@ -11,18 +11,19 @@
 
     (function () {
 
-        fibonacci();
+        fibonacci(50);
 
-        function fibonacci() {
+        function fibonacci(max) {
 
-            var prev = 0;
-            var next = 1;
+            var first = 0;
+            var second = 1;
+            var i = max;
 
-            for (var i = 1, max = 100; i <= max; ++i) {
-                var tmp = prev + next;
-                prev = next;
-                next = tmp;
-                console.log(prev + '\n');
+            while (i--) {
+                console.log((max - i) + ' ' + second);
+                var tmp = first + second;
+                first = second;
+                second = tmp;
             }
         }
 
